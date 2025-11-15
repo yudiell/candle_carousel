@@ -313,18 +313,19 @@ tr:hover {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, var(--bg-sidebar) 0%, #0f172a 100%);
-    color: white;
+    background: transparent;
+    color: var(--text-secondary);
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem 0;
     margin-top: 3rem;
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    border-top: 1px solid var(--border-color);
 }
 
 footer p {
     margin: 0;
     text-align: center;
-    color: var(--text-light);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
 }
 
 /* Responsive Design */

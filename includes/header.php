@@ -38,4 +38,5 @@ $current_page = isset($current_page) ? $current_page : "home";
     
     <!-- Main Content Area -->
     <main class="main-content">
+        <div class="container">
 
