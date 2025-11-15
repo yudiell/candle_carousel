@@ -159,6 +159,10 @@ body {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -299,16 +303,23 @@ tr:hover {
 .bibliography {
     list-style: none;
     margin-left: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .bibliography li {
     margin-bottom: 1rem;
-    padding-left: 1.5rem;
+    padding: 1.25rem 1.5rem 1.25rem 2rem;
     text-indent: -1.5rem;
-    padding: 1rem;
     background: #f8fafc;
     border-radius: var(--radius-sm);
     border-left: 3px solid var(--primary);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 /* Footer */
