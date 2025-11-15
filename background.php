@@ -7,7 +7,7 @@ include 'includes/header.php';
 <div class="content-section">
     <h1 class="page-title">Background Research</h1>
     
-    <h2>Historical Context</h2>
+    <h2>📜 Historical Context</h2>
     
     <p>
         Candle carousels, also known as Christmas pyramids or candle pyramids, originated in the Erzgebirge 
@@ -40,7 +40,7 @@ include 'includes/header.php';
         wooden crafts including pyramids, nutcrackers, and smokers.
     </p>
     
-    <h2>The Science of Convection</h2>
+    <h2>🔬 The Science of Convection</h2>
     
     <p>
         The science behind candle carousels involves convection, which is the transfer of heat through the movement of 
@@ -78,7 +78,7 @@ include 'includes/header.php';
         <li>As the blades rotate, they continue to encounter fresh rising hot air, maintaining continuous motion</li>
     </ul>
     
-    <h3>Comparison to Wind Turbines</h3>
+    <h3>🌬️ Comparison to Wind Turbines</h3>
     
     <p>
         The force exerted by the rising air is similar to how wind turbines work, except that in a candle carousel, the 
@@ -87,7 +87,7 @@ include 'includes/header.php';
         pushing the blades effectively.
     </p>
     
-    <h3>Factors Affecting Efficiency</h3>
+    <h3>⚙️ Factors Affecting Efficiency</h3>
     
     <p>The efficiency of this system depends on:</p>
     <ul>

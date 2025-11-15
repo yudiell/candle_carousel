@@ -7,7 +7,7 @@ include 'includes/header.php';
 <div class="content-section">
     <h1 class="page-title">Conclusion</h1>
     
-    <h2>1. Answer to the Research Question</h2>
+    <h2>1️⃣ Answer to the Research Question</h2>
     
     <p>
         The number of candles significantly affects the rotational speed of a candle carousel. Based on the 
@@ -19,7 +19,7 @@ include 'includes/header.php';
         can be answered by stating that [insert your specific findings based on your data].
     </p>
     
-    <h2>2. Supporting Evidence</h2>
+    <h2>2️⃣ Supporting Evidence</h2>
     
     <p>
         The data table shows that with 1 candle, the average speed was [X] RPM, while with 4 candles, the 
@@ -36,7 +36,7 @@ include 'includes/header.php';
         <li>In the statistical analysis showing [describe statistical findings]</li>
     </ul>
     
-    <h2>3. Statistical Analysis</h2>
+    <h2>3️⃣ Statistical Analysis</h2>
     
     <p>
         [Describe the range of variation between trials, any anomalies in the data, and the consistency of 
@@ -55,7 +55,7 @@ include 'includes/header.php';
         <li>Any outliers or anomalies: [describe]</li>
     </ul>
     
-    <h2>4. Scientific Explanation</h2>
+    <h2>4️⃣ Scientific Explanation</h2>
     
     <p>
         This data supports the hypothesis because more candles produce more thermal energy, which heats a larger 
@@ -64,7 +64,7 @@ include 'includes/header.php';
         rotational speed.
     </p>
     
-    <h3>Real-World Applications</h3>
+    <h3>🌍 Real-World Applications</h3>
     
     <p>
         This principle applies to other real-world phenomena:
@@ -72,25 +72,25 @@ include 'includes/header.php';
     
     <ul>
         <li>
-            <strong>Wind Turbines:</strong> Like the carousel, wind turbines convert air movement into rotational 
+            <strong>🌬️ Wind Turbines:</strong> Like the carousel, wind turbines convert air movement into rotational 
             motion, though they use natural wind rather than convection currents. The same principle of angled blades 
             converting air flow into rotation applies.
         </li>
         <li>
-            <strong>Hot Air Balloons:</strong> Rising hot air provides lift, similar to how it provides force to 
+            <strong>🎈 Hot Air Balloons:</strong> Rising hot air provides lift, similar to how it provides force to 
             spin the carousel. Both rely on the principle that hot air is less dense and rises.
         </li>
         <li>
-            <strong>Convection Ovens:</strong> Hot air circulation distributes heat evenly, using the same principle 
+            <strong>🔥 Convection Ovens:</strong> Hot air circulation distributes heat evenly, using the same principle 
             of hot air rising and cold air sinking. The convection currents ensure even cooking.
         </li>
         <li>
-            <strong>Weather Systems:</strong> Large-scale convection currents drive weather patterns as warm air rises 
+            <strong>🌤️ Weather Systems:</strong> Large-scale convection currents drive weather patterns as warm air rises 
             and cold air sinks. Understanding convection helps meteorologists predict weather patterns.
         </li>
     </ul>
     
-    <h2>5. Hypothesis Evaluation</h2>
+    <h2>5️⃣ Hypothesis Evaluation</h2>
     
     <div style="background-color: #e8f5e9; padding: 1.5rem; border-left: 4px solid #4CAF50; margin: 1.5rem 0; border-radius: 4px;">
         <p style="margin: 0;">
@@ -109,19 +109,19 @@ include 'includes/header.php';
         </p>
     </div>
     
-    <h3>Key Learnings from This Project</h3>
+    <h3>💡 Key Learnings from This Project</h3>
     
     <ul>
-        <li>Heat energy can be converted into mechanical motion through convection</li>
-        <li>The angle of the blades is critical for converting upward air movement into rotational motion</li>
-        <li>More heat sources create stronger convection currents</li>
-        <li>This demonstrates the principle of energy transformation (thermal to kinetic energy)</li>
-        <li>Controlling variables is essential for valid scientific experimentation</li>
-        <li>Multiple trials help ensure reliable and reproducible results</li>
+        <li>⚡ Heat energy can be converted into mechanical motion through convection</li>
+        <li>📐 The angle of the blades is critical for converting upward air movement into rotational motion</li>
+        <li>🔥 More heat sources create stronger convection currents</li>
+        <li>🔄 This demonstrates the principle of energy transformation (thermal to kinetic energy)</li>
+        <li>🔬 Controlling variables is essential for valid scientific experimentation</li>
+        <li>📊 Multiple trials help ensure reliable and reproducible results</li>
     </ul>
     
     <div style="background-color: #f0f0f0; padding: 1.5rem; margin: 2rem 0; border-radius: 8px;">
-        <h3>Summary</h3>
+        <h3>📝 Summary</h3>
         <p>
             This experiment successfully demonstrated how thermal energy from candles can be converted into 
             mechanical motion through convection. The results show a clear relationship between the number of 

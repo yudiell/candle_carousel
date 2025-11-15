@@ -7,9 +7,9 @@ include 'includes/header.php';
 <div class="content-section">
     <h1 class="page-title">Variables & Materials</h1>
     
-    <h2>Variables</h2>
+    <h2>🔬 Variables</h2>
     
-    <h3>Independent Variable</h3>
+    <h3>🎯 Independent Variable</h3>
     <p>
         <strong>The number of candles used:</strong> 1, 2, 3, or 4 candles
     </p>
@@ -17,7 +17,7 @@ include 'includes/header.php';
         This is the variable that is intentionally changed to observe its effect on the carousel's rotation speed.
     </p>
     
-    <h3>Dependent Variable</h3>
+    <h3>📊 Dependent Variable</h3>
     <p>
         <strong>The rotational speed of the carousel:</strong> Measured in rotations per minute (RPM)
     </p>
@@ -25,7 +25,7 @@ include 'includes/header.php';
         This is what we measure to determine the effect of changing the number of candles.
     </p>
     
-    <h3>Constant Variables</h3>
+    <h3>🔒 Constant Variables</h3>
     <p>
         These variables are kept the same throughout all trials to ensure a fair test:
     </p>
@@ -40,17 +40,17 @@ include 'includes/header.php';
         <li><strong>Blade design:</strong> Same number of blades and same shape</li>
     </ul>
     
-    <h2>Materials</h2>
+    <h2>📦 Materials</h2>
     
     <p>The following materials are needed to conduct this experiment:</p>
     
-    <h3>Candles and Fuel</h3>
+    <h3>🕯️ Candles and Fuel</h3>
     <ul>
         <li>4 tea light candles</li>
-        <li>Lighter or matches</li>
+        <li>🔥 Lighter or matches</li>
     </ul>
     
-    <h3>Construction Materials</h3>
+    <h3>🔨 Construction Materials</h3>
     <ul>
         <li>Aluminum pie pan or aluminum foil (for making blades)</li>
         <li>Wooden skewer or thin dowel rod (for center axle)</li>
@@ -59,16 +59,16 @@ include 'includes/header.php';
         <li>Clay or playdough (for securing candles)</li>
     </ul>
     
-    <h3>Measurement Tools</h3>
+    <h3>📏 Measurement Tools</h3>
     <ul>
-        <li>Ruler or measuring tape</li>
-        <li>Protractor (for measuring blade angles)</li>
-        <li>Stopwatch or timer</li>
-        <li>Permanent marker</li>
-        <li>Optional: compass for drawing circles</li>
+        <li>📐 Ruler or measuring tape</li>
+        <li>📐 Protractor (for measuring blade angles)</li>
+        <li>⏱️ Stopwatch or timer</li>
+        <li>✏️ Permanent marker</li>
+        <li>Optional: 🧭 compass for drawing circles</li>
     </ul>
     
-    <h3>Tools</h3>
+    <h3>✂️ Tools</h3>
     <ul>
         <li>Scissors or craft knife</li>
     </ul>

@@ -7,11 +7,11 @@ include 'includes/header.php';
 <div class="content-section">
     <h1 class="page-title">Research Question & Hypothesis</h1>
     
-    <h2>Research Question</h2>
+    <h2>❓ Research Question</h2>
     
     <div style="background-color: #e8f4f8; padding: 1.5rem; border-left: 4px solid #2196F3; margin: 1.5rem 0; border-radius: 4px;">
         <p style="font-size: 1.2rem; font-weight: bold; color: #1976D2; margin: 0;">
-            How does the number of candles affect the rotational speed of a candle carousel?
+            💭 How does the number of candles affect the rotational speed of a candle carousel?
         </p>
     </div>
     
@@ -21,7 +21,7 @@ include 'includes/header.php';
         all other factors.
     </p>
     
-    <h2>Hypothesis</h2>
+    <h2>💡 Hypothesis</h2>
     
     <div style="background-color: #fff3e0; padding: 1.5rem; border-left: 4px solid #FF9800; margin: 1.5rem 0; border-radius: 4px;">
         <p style="font-size: 1.1rem; margin: 0;">
@@ -31,7 +31,7 @@ include 'includes/header.php';
         </p>
     </div>
     
-    <h3>Explanation of Predicted Relationship</h3>
+    <h3>📝 Explanation of Predicted Relationship</h3>
     
     <p>
         This hypothesis predicts a positive relationship between the number of candles and rotational speed. The reasoning 
@@ -39,12 +39,12 @@ include 'includes/header.php';
     </p>
     
     <ul>
-        <li>Each candle produces thermal energy (heat) when burning</li>
-        <li>More candles produce more total heat energy</li>
-        <li>More heat energy creates stronger convection currents</li>
-        <li>Stronger convection currents mean faster-rising hot air</li>
-        <li>Faster-rising air exerts greater force on the angled blades</li>
-        <li>Greater force results in faster rotational speed</li>
+        <li>🕯️ Each candle produces thermal energy (heat) when burning</li>
+        <li>🔥 More candles produce more total heat energy</li>
+        <li>💨 More heat energy creates stronger convection currents</li>
+        <li>⬆️ Stronger convection currents mean faster-rising hot air</li>
+        <li>💪 Faster-rising air exerts greater force on the angled blades</li>
+        <li>⚡ Greater force results in faster rotational speed</li>
     </ul>
     
     <p>

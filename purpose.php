@@ -15,7 +15,7 @@ include 'includes/header.php';
         observe how differences in air temperature create forces that produce motion.
     </p>
     
-    <h2>Importance and Applicability</h2>
+    <h2>💡 Importance and Applicability</h2>
     
     <p>
         This experiment demonstrates a fundamental principle of physics: energy transformation. Thermal energy 
@@ -24,11 +24,11 @@ include 'includes/header.php';
     </p>
     
     <ul>
-        <li><strong>Wind Turbines:</strong> Convert air movement into rotational motion to generate electricity</li>
-        <li><strong>Hot Air Balloons:</strong> Use rising hot air to provide lift</li>
-        <li><strong>Heating Systems:</strong> Rely on convection to distribute warm air throughout buildings</li>
-        <li><strong>Weather Systems:</strong> Large-scale convection drives weather patterns as warm air rises and cold air sinks</li>
-        <li><strong>Convection Ovens:</strong> Use circulating hot air to cook food evenly</li>
+        <li><strong>🌬️ Wind Turbines:</strong> Convert air movement into rotational motion to generate electricity</li>
+        <li><strong>🎈 Hot Air Balloons:</strong> Use rising hot air to provide lift</li>
+        <li><strong>🏠 Heating Systems:</strong> Rely on convection to distribute warm air throughout buildings</li>
+        <li><strong>🌤️ Weather Systems:</strong> Large-scale convection drives weather patterns as warm air rises and cold air sinks</li>
+        <li><strong>🔥 Convection Ovens:</strong> Use circulating hot air to cook food evenly</li>
     </ul>
     
     <p>

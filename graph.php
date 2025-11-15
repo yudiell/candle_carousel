@@ -13,7 +13,7 @@ include 'includes/header.php';
     </p>
     
     <div class="graph-container">
-        <h2>Effect of Number of Candles on Carousel Rotation Speed</h2>
+        <h2>📈 Effect of Number of Candles on Carousel Rotation Speed</h2>
         
         <div class="graph-placeholder">
             <p style="font-size: 1.1rem; color: #666; margin-bottom: 1rem;">
@@ -36,7 +36,7 @@ include 'includes/header.php';
         </div>
         
         <div style="margin-top: 2rem; padding: 1rem; background-color: #f5f5f5; border-radius: 4px;">
-            <h3>Graph Interpretation Guide</h3>
+            <h3>🔍 Graph Interpretation Guide</h3>
             <p>When analyzing your graph, look for:</p>
             <ul style="text-align: left; display: inline-block;">
                 <li><strong>Trend:</strong> Does the line/bar go up, down, or stay level?</li>
@@ -47,17 +47,17 @@ include 'includes/header.php';
         </div>
     </div>
     
-    <h2>Creating Your Graph</h2>
+    <h2>✏️ Creating Your Graph</h2>
     
     <p>You can create your graph using:</p>
     <ul>
-        <li>Graph paper and pencil (traditional method)</li>
-        <li>Spreadsheet software (Excel, Google Sheets) - recommended for accuracy</li>
-        <li>Online graphing tools</li>
-        <li>Scientific graphing software</li>
+        <li>📄 Graph paper and pencil (traditional method)</li>
+        <li>💻 Spreadsheet software (Excel, Google Sheets) - recommended for accuracy</li>
+        <li>🌐 Online graphing tools</li>
+        <li>🔬 Scientific graphing software</li>
     </ul>
     
-    <h3>Graph Requirements</h3>
+    <h3>✅ Graph Requirements</h3>
     <ul>
         <li>Clear, readable labels on both axes</li>
         <li>Appropriate scale (make sure the data fills the graph space)</li>

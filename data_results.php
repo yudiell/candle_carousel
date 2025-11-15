@@ -7,7 +7,7 @@ include 'includes/header.php';
 <div class="content-section">
     <h1 class="page-title">Data & Results</h1>
     
-    <h2>Data</h2>
+    <h2>📊 Data</h2>
     
     <p>The following table shows the rotational speed data collected during the experiment:</p>
     
@@ -55,7 +55,7 @@ include 'includes/header.php';
     
     <p><strong>Note:</strong> RPM = Rotations per minute</p>
     
-    <h3>Additional Observations</h3>
+    <h3>👁️ Additional Observations</h3>
     <ul>
         <li>Temperature of air above candles (if measured): _____°C</li>
         <li>Time for carousel to begin spinning after lighting candles: _____ seconds</li>
@@ -71,7 +71,7 @@ include 'includes/header.php';
         </p>
     </div>
     
-    <h2>Results</h2>
+    <h2>📈 Results</h2>
     
     <p>
         After conducting the statistical analysis of the data collected, the results show [describe whether 
@@ -90,7 +90,7 @@ include 'includes/header.php';
         was [calculate and insert percentage].
     </p>
     
-    <h3>Key Findings</h3>
+    <h3>🔍 Key Findings</h3>
     <ul>
         <li>The relationship between number of candles and rotation speed appears to be [linear/exponential/other]</li>
         <li>Each additional candle increased rotation speed by approximately [X]%</li>

@@ -14,7 +14,7 @@ include 'includes/header.php';
     </div>
     
     <div style="background-color: #fff9e6; padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #D2691E;">
-        <h2>Project Overview</h2>
+        <h2>🔄 Project Overview</h2>
         <p>
             This project explores how thermal energy from candles can be converted into mechanical motion 
             through the process of convection. By studying candle carousels, we observe how differences in 
@@ -24,18 +24,18 @@ include 'includes/header.php';
     </div>
     
     <div style="margin-top: 2rem;">
-        <h2>Explore the Project</h2>
+        <h2>📚 Explore the Project</h2>
         <p>Navigate through the pages above to learn about:</p>
         <ul>
-            <li><strong>Purpose:</strong> Why this experiment was conducted</li>
-            <li><strong>Background Research:</strong> Historical context and scientific principles</li>
-            <li><strong>Question & Hypothesis:</strong> Research question and predictions</li>
-            <li><strong>Variables & Materials:</strong> Experimental design and materials needed</li>
-            <li><strong>Procedures:</strong> Step-by-step instructions</li>
-            <li><strong>Data & Results:</strong> Experimental findings and analysis</li>
-            <li><strong>Graph:</strong> Visual representation of the data</li>
-            <li><strong>Conclusion:</strong> Answers, evidence, and real-world applications</li>
-            <li><strong>Future Research:</strong> Ideas for extending the experiment</li>
+            <li><strong>🎯 Purpose:</strong> Why this experiment was conducted</li>
+            <li><strong>📖 Background Research:</strong> Historical context and scientific principles</li>
+            <li><strong>❓ Question & Hypothesis:</strong> Research question and predictions</li>
+            <li><strong>🔬 Variables & Materials:</strong> Experimental design and materials needed</li>
+            <li><strong>📋 Procedures:</strong> Step-by-step instructions</li>
+            <li><strong>📊 Data & Results:</strong> Experimental findings and analysis</li>
+            <li><strong>📈 Graph:</strong> Visual representation of the data</li>
+            <li><strong>✅ Conclusion:</strong> Answers, evidence, and real-world applications</li>
+            <li><strong>🔮 Future Research:</strong> Ideas for extending the experiment</li>
         </ul>
     </div>
     
