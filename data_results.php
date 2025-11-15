@@ -63,7 +63,7 @@ include 'includes/header.php';
         <li>Room temperature: _____°C</li>
     </ul>
     
-    <div style="background-color: #e3f2fd; padding: 1rem; margin: 1.5rem 0; border-left: 4px solid #2196F3; border-radius: 4px;">
+    <div style="background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); padding: 1rem; margin: 1.5rem 0; border-left: 4px solid #6366f1; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
         <p style="margin: 0; font-style: italic;">
             <strong>Note:</strong> This data table is a template. Fill in your actual experimental data 
             as you conduct the experiment. Calculate the average RPM for each candle configuration by 
@@ -98,7 +98,7 @@ include 'includes/header.php';
         <li>Data consistency across trials: [describe variation between trials]</li>
     </ul>
     
-    <div style="background-color: #fff3e0; padding: 1rem; margin: 1.5rem 0; border-left: 4px solid #FF9800; border-radius: 4px;">
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 1rem; margin: 1.5rem 0; border-left: 4px solid #f59e0b; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
         <p style="margin: 0;">
             <strong>Statistical Analysis:</strong> After completing your experiment, calculate the following:
         </p>

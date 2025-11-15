@@ -35,7 +35,7 @@ include 'includes/header.php';
             </p>
         </div>
         
-        <div style="margin-top: 2rem; padding: 1rem; background-color: #f5f5f5; border-radius: 4px;">
+        <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0;">
             <h3>🔍 Graph Interpretation Guide</h3>
             <p>When analyzing your graph, look for:</p>
             <ul style="text-align: left; display: inline-block;">

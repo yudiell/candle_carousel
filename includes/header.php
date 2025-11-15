@@ -14,24 +14,28 @@ $current_page = isset($current_page) ? $current_page : "home";
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="site-title">How Candle Carousels Convert Heat Energy into Motion</h1>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.php" <?php echo $current_page == 'home' ? 'class="active"' : ''; ?>>Home</a></li>
-                    <li><a href="purpose.php" <?php echo $current_page == 'purpose' ? 'class="active"' : ''; ?>>Purpose</a></li>
-                    <li><a href="background.php" <?php echo $current_page == 'background' ? 'class="active"' : ''; ?>>Background</a></li>
-                    <li><a href="question_hypothesis.php" <?php echo $current_page == 'question' ? 'class="active"' : ''; ?>>Question & Hypothesis</a></li>
-                    <li><a href="variables_materials.php" <?php echo $current_page == 'variables' ? 'class="active"' : ''; ?>>Variables & Materials</a></li>
-                    <li><a href="procedures.php" <?php echo $current_page == 'procedures' ? 'class="active"' : ''; ?>>Procedures</a></li>
-                    <li><a href="data_results.php" <?php echo $current_page == 'data' ? 'class="active"' : ''; ?>>Data & Results</a></li>
-                    <li><a href="graph.php" <?php echo $current_page == 'graph' ? 'class="active"' : ''; ?>>Graph</a></li>
-                    <li><a href="conclusion.php" <?php echo $current_page == 'conclusion' ? 'class="active"' : ''; ?>>Conclusion</a></li>
-                    <li><a href="future_bibliography.php" <?php echo $current_page == 'future' ? 'class="active"' : ''; ?>>Future Research</a></li>
-                </ul>
-            </nav>
+    <!-- Floating Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h1 class="site-title">🕯️ Candle Carousel</h1>
+            <p class="site-subtitle">Science Project</p>
         </div>
-    </header>
-    <main class="container">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.php" <?php echo $current_page == 'home' ? 'class="active"' : ''; ?>><span class="nav-icon">🏠</span><span class="nav-text">Home</span></a></li>
+                <li><a href="purpose.php" <?php echo $current_page == 'purpose' ? 'class="active"' : ''; ?>><span class="nav-icon">🎯</span><span class="nav-text">Purpose</span></a></li>
+                <li><a href="background.php" <?php echo $current_page == 'background' ? 'class="active"' : ''; ?>><span class="nav-icon">📖</span><span class="nav-text">Background</span></a></li>
+                <li><a href="question_hypothesis.php" <?php echo $current_page == 'question' ? 'class="active"' : ''; ?>><span class="nav-icon">❓</span><span class="nav-text">Question & Hypothesis</span></a></li>
+                <li><a href="variables_materials.php" <?php echo $current_page == 'variables' ? 'class="active"' : ''; ?>><span class="nav-icon">🔬</span><span class="nav-text">Variables & Materials</span></a></li>
+                <li><a href="procedures.php" <?php echo $current_page == 'procedures' ? 'class="active"' : ''; ?>><span class="nav-icon">📋</span><span class="nav-text">Procedures</span></a></li>
+                <li><a href="data_results.php" <?php echo $current_page == 'data' ? 'class="active"' : ''; ?>><span class="nav-icon">📊</span><span class="nav-text">Data & Results</span></a></li>
+                <li><a href="graph.php" <?php echo $current_page == 'graph' ? 'class="active"' : ''; ?>><span class="nav-icon">📈</span><span class="nav-text">Graph</span></a></li>
+                <li><a href="conclusion.php" <?php echo $current_page == 'conclusion' ? 'class="active"' : ''; ?>><span class="nav-icon">✅</span><span class="nav-text">Conclusion</span></a></li>
+                <li><a href="future_bibliography.php" <?php echo $current_page == 'future' ? 'class="active"' : ''; ?>><span class="nav-icon">🔮</span><span class="nav-text">Future Research</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <!-- Main Content Area -->
+    <main class="main-content">
 

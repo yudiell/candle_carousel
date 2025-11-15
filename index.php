@@ -8,12 +8,12 @@ include 'includes/header.php';
     <h1 class="page-title">How Candle Carousels Convert Heat Energy into Motion</h1>
     
     <div style="text-align: center; margin: 2rem 0;">
-        <p style="font-size: 1.2rem; color: #666; font-style: italic;">
+        <p style="font-size: 1.2rem; color: #64748b; font-style: italic;">
             A Science Fair Project Demonstrating Thermal Energy Conversion Through Convection
         </p>
     </div>
     
-    <div style="background-color: #fff9e6; padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #D2691E;">
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 2rem; border-radius: 16px; margin: 2rem 0; border-left: 4px solid #f59e0b; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
         <h2>🔄 Project Overview</h2>
         <p>
             This project explores how thermal energy from candles can be converted into mechanical motion 

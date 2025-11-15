@@ -92,7 +92,7 @@ include 'includes/header.php';
     
     <h2>5️⃣ Hypothesis Evaluation</h2>
     
-    <div style="background-color: #e8f5e9; padding: 1.5rem; border-left: 4px solid #4CAF50; margin: 1.5rem 0; border-radius: 4px;">
+    <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 1.5rem; border-left: 4px solid #14b8a6; margin: 1.5rem 0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
         <p style="margin: 0;">
             <strong>[If hypothesis was correct:]</strong> The hypothesis was supported by the experimental data. 
             As predicted, increasing the number of candles did result in faster rotation speeds due to stronger 
@@ -100,7 +100,7 @@ include 'includes/header.php';
         </p>
     </div>
     
-    <div style="background-color: #fff3e0; padding: 1.5rem; border-left: 4px solid #FF9800; margin: 1.5rem 0; border-radius: 4px;">
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 1.5rem; border-left: 4px solid #f59e0b; margin: 1.5rem 0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
         <p style="margin: 0;">
             <strong>[If hypothesis was incorrect:]</strong> The hypothesis was not fully supported. [Explain what 
             you learned—for example: "While rotation speed did increase from 1 to 3 candles, adding a 4th candle 
@@ -120,7 +120,7 @@ include 'includes/header.php';
         <li>📊 Multiple trials help ensure reliable and reproducible results</li>
     </ul>
     
-    <div style="background-color: #f0f0f0; padding: 1.5rem; margin: 2rem 0; border-radius: 8px;">
+    <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 1.5rem; margin: 2rem 0; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0;">
         <h3>📝 Summary</h3>
         <p>
             This experiment successfully demonstrated how thermal energy from candles can be converted into 

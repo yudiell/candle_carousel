@@ -9,8 +9,8 @@ include 'includes/header.php';
     
     <h2>❓ Research Question</h2>
     
-    <div style="background-color: #e8f4f8; padding: 1.5rem; border-left: 4px solid #2196F3; margin: 1.5rem 0; border-radius: 4px;">
-        <p style="font-size: 1.2rem; font-weight: bold; color: #1976D2; margin: 0;">
+    <div style="background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); padding: 1.5rem; border-left: 4px solid #6366f1; margin: 1.5rem 0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+        <p style="font-size: 1.2rem; font-weight: bold; color: #4f46e5; margin: 0;">
             💭 How does the number of candles affect the rotational speed of a candle carousel?
         </p>
     </div>
@@ -23,7 +23,7 @@ include 'includes/header.php';
     
     <h2>💡 Hypothesis</h2>
     
-    <div style="background-color: #fff3e0; padding: 1.5rem; border-left: 4px solid #FF9800; margin: 1.5rem 0; border-radius: 4px;">
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 1.5rem; border-left: 4px solid #f59e0b; margin: 1.5rem 0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
         <p style="font-size: 1.1rem; margin: 0;">
             <strong>If</strong> more candles are placed under the candle carousel, <strong>then</strong> the carousel will 
             spin faster, <strong>because</strong> more candles produce more heat energy, which creates stronger convection 
