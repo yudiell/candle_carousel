@@ -24,15 +24,15 @@
                 const randomX = Math.random() * sidebarWidth;
                 snowflake.style.left = randomX + 'px';
                 
-                // Random animation duration (3-6 seconds)
-                const duration = 3 + Math.random() * 3;
+                // Random animation duration (6-10 seconds) - slower fall
+                const duration = 6 + Math.random() * 4;
                 snowflake.style.animationDuration = duration + 's';
                 
                 // Random delay
                 snowflake.style.animationDelay = Math.random() * 2 + 's';
                 
-                // Random size
-                const size = 0.5 + Math.random() * 0.5;
+                // Random size (0.8-1.5em) - bigger snowflakes
+                const size = 0.8 + Math.random() * 0.7;
                 snowflake.style.fontSize = size + 'em';
                 
                 // Store cleanup time
