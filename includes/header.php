@@ -13,7 +13,7 @@ $current_page = isset($current_page) ? $current_page : "home";
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="christmas-theme">
     <!-- Floating Sidebar Navigation -->
     <aside class="sidebar">
         <div class="sidebar-header">
