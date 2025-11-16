@@ -78,59 +78,6 @@
                 startSnowfall();
             }
         })();
-
-        // Fire animation effect for sidebar bottom border
-        (function() {
-            const fireContainer = document.querySelector('.fire-container');
-            if (!fireContainer) return;
-            
-            function createFire() {
-                const sidebarWidth = fireContainer.offsetWidth || 280;
-                const numFlames = Math.floor(sidebarWidth / 25); // Create flames every ~25px
-                
-                // Clear existing flames
-                fireContainer.innerHTML = '';
-                
-                // Create flames across the bottom
-                for (let i = 0; i < numFlames; i++) {
-                    const flame = document.createElement('div');
-                    flame.className = 'flame';
-                    
-                    // Position flames evenly across the width
-                    const position = (i / numFlames) * sidebarWidth + (Math.random() * 10 - 5);
-                    flame.style.left = position + 'px';
-                    
-                    // Random size variation (0.8x to 1.3x)
-                    const scale = 0.8 + Math.random() * 0.5;
-                    flame.style.transform = `scale(${scale})`;
-                    
-                    // Random animation delay for more natural flickering
-                    flame.style.animationDelay = Math.random() * 0.5 + 's';
-                    
-                    // Random height variation
-                    const height = 25 + Math.random() * 15;
-                    flame.style.height = height + 'px';
-                    flame.style.width = (15 + Math.random() * 10) + 'px';
-                    
-                    fireContainer.appendChild(flame);
-                }
-            }
-            
-            function startFire() {
-                createFire();
-                // Update fire periodically to keep it dynamic
-                setInterval(() => {
-                    createFire();
-                }, 3000);
-            }
-            
-            // Start fire when page loads
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', startFire);
-            } else {
-                startFire();
-            }
-        })();
     </script>
 </body>
 </html>

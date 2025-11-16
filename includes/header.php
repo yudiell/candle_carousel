@@ -17,7 +17,6 @@ $current_page = isset($current_page) ? $current_page : "home";
     <!-- Floating Sidebar Navigation -->
     <aside class="sidebar">
         <div class="snow-container"></div>
-        <div class="fire-container"></div>
         <div class="sidebar-header">
             <h1 class="site-title">🕯️ Candle Carousel</h1>
             <p class="site-subtitle">Science Project</p>
