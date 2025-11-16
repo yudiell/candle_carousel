@@ -2,6 +2,39 @@
 $page_title = "Conclusion";
 $current_page = "conclusion";
 include 'includes/header.php';
+
+// Load JSON data
+$json_data = file_get_contents('data.json');
+$experiment_data = json_decode($json_data, true);
+$data = $experiment_data['data'];
+
+// Calculate statistics
+$one_candle_avg = $data[0]['average'];
+$two_candle_avg = $data[1]['average'];
+$three_candle_avg = $data[2]['average'];
+$four_candle_avg = $data[3]['average'];
+
+// Calculate percentage increases
+$two_to_three_increase = (($three_candle_avg - $two_candle_avg) / $two_candle_avg) * 100;
+$three_to_four_increase = (($four_candle_avg - $three_candle_avg) / $three_candle_avg) * 100;
+
+// Calculate standard deviations
+function calculate_std_dev($trials, $average) {
+    $variance = 0;
+    foreach ($trials as $trial) {
+        $variance += pow($trial - $average, 2);
+    }
+    return sqrt($variance / count($trials));
+}
+
+$std_dev_2 = calculate_std_dev([$data[1]['trials']['t1'], $data[1]['trials']['t2'], $data[1]['trials']['t3']], $two_candle_avg);
+$std_dev_3 = calculate_std_dev([$data[2]['trials']['t1'], $data[2]['trials']['t2'], $data[2]['trials']['t3']], $three_candle_avg);
+$std_dev_4 = calculate_std_dev([$data[3]['trials']['t1'], $data[3]['trials']['t2'], $data[3]['trials']['t3']], $four_candle_avg);
+
+// Calculate ranges
+$range_2 = max($data[1]['trials']['t1'], $data[1]['trials']['t2'], $data[1]['trials']['t3']) - min($data[1]['trials']['t1'], $data[1]['trials']['t2'], $data[1]['trials']['t3']);
+$range_3 = max($data[2]['trials']['t1'], $data[2]['trials']['t2'], $data[2]['trials']['t3']) - min($data[2]['trials']['t1'], $data[2]['trials']['t2'], $data[2]['trials']['t3']);
+$range_4 = max($data[3]['trials']['t1'], $data[3]['trials']['t2'], $data[3]['trials']['t3']) - min($data[3]['trials']['t1'], $data[3]['trials']['t2'], $data[3]['trials']['t3']);
 ?>
 
 <div class="content-section">
@@ -11,48 +44,68 @@ include 'includes/header.php';
     
     <p>
         The number of candles significantly affects the rotational speed of a candle carousel. Based on the 
-        experimental data, the carousel rotates [faster/slower/at varying speeds] as more candles are added.
+        experimental data, the carousel rotates <strong>faster</strong> as more candles are added. With 1 candle, 
+        the carousel did not rotate at all (0 RPM), but as more candles were added, the rotation speed increased 
+        substantially, reaching an average of <?php echo number_format($four_candle_avg, 1); ?> RPM with 4 candles.
     </p>
     
     <p>
         The research question "How does the number of candles affect the rotational speed of a candle carousel?" 
-        can be answered by stating that [insert your specific findings based on your data].
+        can be answered by stating that there is a <strong>strong positive relationship</strong> between the number 
+        of candles and rotational speed. The carousel requires a minimum threshold of heat energy (more than 1 candle) 
+        to begin rotating, and beyond that threshold, each additional candle produces a measurable increase in rotation 
+        speed, with the relationship appearing to be non-linear.
     </p>
     
     <h2>2️⃣ Supporting Evidence</h2>
     
     <p>
-        The data table shows that with 1 candle, the average speed was [X] RPM, while with 4 candles, the 
-        average speed increased to [Y] RPM. The graph clearly illustrates [describe the trend shown in the 
-        graph]. This represents a [calculate percentage] increase in rotational speed.
+        The data table shows that with 1 candle, the average speed was <?php echo number_format($one_candle_avg, 1); ?> RPM 
+        (no rotation), while with 4 candles, the average speed increased to <?php echo number_format($four_candle_avg, 1); ?> RPM. 
+        The graph clearly illustrates a <strong>positive upward trend</strong> with an accelerating rate of increase. 
+        The most dramatic increase occurred between 2 and 3 candles, where the speed more than doubled from 
+        <?php echo number_format($two_candle_avg, 1); ?> RPM to <?php echo number_format($three_candle_avg, 1); ?> RPM 
+        (a <?php echo number_format($two_to_three_increase, 1); ?>% increase).
     </p>
     
     <p>
         Evidence supporting this conclusion can be found:
     </p>
     <ul>
-        <li>In the data table on the Data & Results page, showing consistent increases across trials</li>
-        <li>In the graph on the Graph page, which visually demonstrates the relationship</li>
-        <li>In the statistical analysis showing [describe statistical findings]</li>
+        <li>In the data table on the Data & Results page, showing consistent increases across trials: 0 RPM (1 candle), 
+            <?php echo number_format($two_candle_avg, 1); ?> RPM (2 candles), <?php echo number_format($three_candle_avg, 1); ?> RPM 
+            (3 candles), and <?php echo number_format($four_candle_avg, 1); ?> RPM (4 candles)</li>
+        <li>In the graph on the Graph page, which visually demonstrates a clear positive correlation with an accelerating trend</li>
+        <li>In the statistical analysis showing increasing consistency as more candles are added (standard deviation decreases from 
+            <?php echo number_format($std_dev_2, 1); ?> for 2 candles to <?php echo number_format($std_dev_4, 1); ?> for 4 candles)</li>
     </ul>
     
     <h2>3️⃣ Statistical Analysis</h2>
     
     <p>
-        [Describe the range of variation between trials, any anomalies in the data, and the consistency of 
-        results. For example: "The standard deviation across trials was small, indicating consistent results. 
-        The R² value of the trend line was [value], suggesting a strong correlation between number of candles 
-        and rotation speed."]
+        The standard deviation across trials varied by candle configuration, with the most consistent results occurring 
+        with 4 candles (standard deviation of <?php echo number_format($std_dev_4, 1); ?> RPM). The data shows that as more 
+        candles were added, the results became more consistent, suggesting that the effect becomes more reliable with 
+        greater heat energy. The relationship between number of candles and rotation speed shows a strong positive 
+        correlation, with the trend appearing non-linear rather than linear.
     </p>
     
     <p>
         Key statistical findings:
     </p>
     <ul>
-        <li>Range of variation: [describe]</li>
-        <li>Data consistency: [describe]</li>
-        <li>Correlation strength: [describe]</li>
-        <li>Any outliers or anomalies: [describe]</li>
+        <li><strong>Range of variation:</strong> The range of values within each configuration decreased as more candles were added: 
+            <?php echo number_format($range_2, 1); ?> RPM for 2 candles, <?php echo number_format($range_3, 1); ?> RPM for 3 candles, 
+            and <?php echo number_format($range_4, 1); ?> RPM for 4 candles, indicating greater consistency with more heat sources</li>
+        <li><strong>Data consistency:</strong> Standard deviations were <?php echo number_format($std_dev_2, 1); ?> RPM (2 candles), 
+            <?php echo number_format($std_dev_3, 1); ?> RPM (3 candles), and <?php echo number_format($std_dev_4, 1); ?> RPM (4 candles), 
+            showing improved consistency with more candles</li>
+        <li><strong>Correlation strength:</strong> The data demonstrates a strong positive correlation, with each additional candle 
+            producing measurable increases in rotation speed. The relationship is non-linear, with the largest percentage increase 
+            (<?php echo number_format($two_to_three_increase, 1); ?>%) occurring between 2 and 3 candles</li>
+        <li><strong>Any outliers or anomalies:</strong> The first trial with 2 candles resulted in 0 RPM, which may indicate 
+            experimental variability or the need for a minimum heat threshold. However, trials 2 and 3 with 2 candles produced 
+            measurable rotation (9 and 13 RPM), confirming that 2 candles can produce rotation</li>
     </ul>
     
     <h2>4️⃣ Scientific Explanation</h2>
@@ -94,18 +147,13 @@ include 'includes/header.php';
     
     <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 1.5rem; border-left: 4px solid #14b8a6; margin: 1.5rem 0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
         <p style="margin: 0;">
-            <strong>[If hypothesis was correct:]</strong> The hypothesis was supported by the experimental data. 
+            <strong>✅ Hypothesis Supported:</strong> The hypothesis was <strong>supported</strong> by the experimental data. 
             As predicted, increasing the number of candles did result in faster rotation speeds due to stronger 
-            convection currents.
-        </p>
-    </div>
-    
-    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 1.5rem; border-left: 4px solid #f59e0b; margin: 1.5rem 0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-        <p style="margin: 0;">
-            <strong>[If hypothesis was incorrect:]</strong> The hypothesis was not fully supported. [Explain what 
-            you learned—for example: "While rotation speed did increase from 1 to 3 candles, adding a 4th candle 
-            did not significantly increase the speed further. This may be because the maximum force on the blades 
-            was reached, or because heat from 4 candles interfered with the convection pattern."]
+            convection currents. The data clearly shows a positive relationship: from 0 RPM with 1 candle to 
+            <?php echo number_format($four_candle_avg, 1); ?> RPM with 4 candles. Each additional candle beyond the 
+            minimum threshold (2 candles) produced measurable increases in rotation speed, confirming that more 
+            candles produce more thermal energy, which creates stronger convection currents that exert greater force 
+            on the carousel blades.
         </p>
     </div>
     
@@ -124,9 +172,14 @@ include 'includes/header.php';
         <h3>📝 Summary</h3>
         <p>
             This experiment successfully demonstrated how thermal energy from candles can be converted into 
-            mechanical motion through convection. The results show a clear relationship between the number of 
-            heat sources (candles) and the resulting motion (rotation speed), illustrating fundamental physics 
-            principles that apply to many real-world technologies and natural phenomena.
+            mechanical motion through convection. The results show a clear <strong>positive relationship</strong> between 
+            the number of heat sources (candles) and the resulting motion (rotation speed), with speeds increasing from 
+            0 RPM with 1 candle to <?php echo number_format($four_candle_avg, 1); ?> RPM with 4 candles. The relationship 
+            is non-linear, with the most dramatic increase occurring between 2 and 3 candles (a 
+            <?php echo number_format($two_to_three_increase, 1); ?>% increase). The data confirms that a minimum threshold 
+            of heat energy is required to initiate rotation, and beyond that threshold, each additional candle produces 
+            stronger convection currents that result in faster rotation. This illustrates fundamental physics principles 
+            of energy transformation (thermal to kinetic) that apply to many real-world technologies and natural phenomena.
         </p>
     </div>
     
