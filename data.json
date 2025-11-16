@@ -1,0 +1,46 @@
+{
+    "experiment": {
+        "title": "Candle Carousel Rotation Speed Data",
+        "unit": "RPM",
+        "trials": 3,
+        "candles": 4
+    },
+    "data": [
+        {
+            "candle": 1,
+            "trials": {
+                "t1": 0,
+                "t2": 0,
+                "t3": 0
+            },
+            "average": 0
+        },
+        {
+            "candle": 2,
+            "trials": {
+                "t1": 0,
+                "t2": 9,
+                "t3": 13
+            },
+            "average": 7.3
+        },
+        {
+            "candle": 3,
+            "trials": {
+                "t1": 18,
+                "t2": 13,
+                "t3": 15
+            },
+            "average": 15.3
+        },
+        {
+            "candle": 4,
+            "trials": {
+                "t1": 22,
+                "t2": 22,
+                "t3": 25
+            },
+            "average": 23
+        }
+    ]
+}
