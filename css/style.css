@@ -130,6 +130,27 @@ body {
     overflow-x: hidden;
     z-index: 1000;
     border-radius: 0;
+    border-bottom: 3px solid #ff4500;
+}
+
+.sidebar::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg,
+        #ff0000 0%,
+        #ff7300 25%,
+        #ffaa00 50%,
+        #ff7300 75%,
+        #ff0000 100%
+    );
+    background-size: 300% 100%;
+    animation: fireMove 1.5s linear infinite;
+    box-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500;
+    z-index: 1001;
 }
 
 /* Snow container - separate layer to prevent layout shifts */
@@ -139,6 +160,18 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Fire container - positioned at bottom of sidebar */
+.fire-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
     pointer-events: none;
     z-index: 1;
     overflow: hidden;
@@ -583,6 +616,75 @@ footer p {
     100% {
         transform: translateY(100vh) translateX(20px) rotate(360deg);
         opacity: 0;
+    }
+}
+
+/* Fire Animation */
+.flame {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 30px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    background: radial-gradient(circle, #ff6b00 0%, #ff4500 30%, #dc2626 60%, #b91c1c 100%);
+    box-shadow: 0 0 10px #ff6b00, 0 0 20px #ff4500, 0 0 30px #dc2626;
+    opacity: 0.9;
+    animation: flicker 0.5s infinite alternate, fireGlow 1s infinite ease-in-out;
+    transform-origin: bottom center;
+}
+
+.flame::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 20px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    background: radial-gradient(circle, #ffd700 0%, #ff8c00 50%, #ff4500 100%);
+    box-shadow: 0 0 8px #ffd700;
+    opacity: 0.8;
+}
+
+@keyframes flicker {
+    0% {
+        transform: scaleY(1) scaleX(1) translateX(0);
+        opacity: 0.9;
+    }
+    25% {
+        transform: scaleY(1.1) scaleX(0.95) translateX(-2px);
+        opacity: 1;
+    }
+    50% {
+        transform: scaleY(0.95) scaleX(1.05) translateX(2px);
+        opacity: 0.85;
+    }
+    75% {
+        transform: scaleY(1.05) scaleX(0.98) translateX(-1px);
+        opacity: 0.95;
+    }
+    100% {
+        transform: scaleY(1) scaleX(1) translateX(0);
+        opacity: 0.9;
+    }
+}
+
+@keyframes fireGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px #ff6b00, 0 0 20px #ff4500, 0 0 30px #dc2626;
+    }
+    50% {
+        box-shadow: 0 0 15px #ff6b00, 0 0 30px #ff4500, 0 0 45px #dc2626;
+    }
+}
+
+@keyframes fireMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 300% 0%;
     }
 }
 
