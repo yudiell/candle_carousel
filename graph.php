@@ -2,6 +2,19 @@
 $page_title = "Graph";
 $current_page = "graph";
 include 'includes/header.php';
+
+// Load JSON data
+$json_data = file_get_contents('data.json');
+$experiment_data = json_decode($json_data, true);
+$data = $experiment_data['data'];
+
+// Prepare data for JavaScript
+$candle_numbers = array_column($data, 'candle');
+$averages = array_column($data, 'average');
+$json_for_js = json_encode([
+    'labels' => $candle_numbers,
+    'averages' => $averages
+]);
 ?>
 
 <div class="content-section">
@@ -15,24 +28,8 @@ include 'includes/header.php';
     <div class="graph-container">
         <h2>📈 Effect of Number of Candles on Carousel Rotation Speed</h2>
         
-        <div class="graph-placeholder">
-            <p style="font-size: 1.1rem; color: #666; margin-bottom: 1rem;">
-                <strong>Graph Placeholder</strong>
-            </p>
-            <p style="color: #999;">
-                This graph should display:
-            </p>
-            <ul style="text-align: left; display: inline-block; color: #666;">
-                <li><strong>X-axis:</strong> Number of Candles (1, 2, 3, 4)</li>
-                <li><strong>Y-axis:</strong> Average Rotations per Minute (RPM)</li>
-                <li><strong>Title:</strong> "Effect of Number of Candles on Carousel Rotation Speed"</li>
-                <li>Data points connected with a line or displayed as bars</li>
-            </ul>
-            <p style="margin-top: 1rem; color: #999;">
-                Once experimental data is collected, create a line graph or bar chart showing the average 
-                RPM for each candle configuration. The graph should clearly illustrate the relationship 
-                between the independent variable (number of candles) and the dependent variable (rotation speed).
-            </p>
+        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin: 2rem 0;">
+            <canvas id="rpmChart" style="max-height: 400px;"></canvas>
         </div>
         
         <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0;">
@@ -47,30 +44,124 @@ include 'includes/header.php';
         </div>
     </div>
     
-    <h2>✏️ Creating Your Graph</h2>
-    
-    <p>You can create your graph using:</p>
-    <ul>
-        <li>📄 Graph paper and pencil (traditional method)</li>
-        <li>💻 Spreadsheet software (Excel, Google Sheets) - recommended for accuracy</li>
-        <li>🌐 Online graphing tools</li>
-        <li>🔬 Scientific graphing software</li>
-    </ul>
-    
-    <h3>✅ Graph Requirements</h3>
-    <ul>
-        <li>Clear, readable labels on both axes</li>
-        <li>Appropriate scale (make sure the data fills the graph space)</li>
-        <li>Title that describes what the graph shows</li>
-        <li>Units clearly indicated (RPM for Y-axis)</li>
-        <li>Neat, professional appearance</li>
-    </ul>
-    
     <div class="page-nav">
         <a href="data_results.php" class="btn btn-secondary">← Previous: Data & Results</a>
         <a href="conclusion.php" class="btn">Next: Conclusion →</a>
     </div>
 </div>
+
+<!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<script>
+// Get data from PHP
+const chartData = <?php echo $json_for_js; ?>;
+
+// Create the chart
+const ctx = document.getElementById('rpmChart').getContext('2d');
+const rpmChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: chartData.labels.map(c => c + ' Candle' + (c > 1 ? 's' : '')),
+        datasets: [{
+            label: 'Average RPM',
+            data: chartData.averages,
+            borderColor: '#dc2626',
+            backgroundColor: 'rgba(220, 38, 38, 0.1)',
+            borderWidth: 3,
+            pointBackgroundColor: '#dc2626',
+            pointBorderColor: '#ffffff',
+            pointBorderWidth: 2,
+            pointRadius: 6,
+            pointHoverRadius: 8,
+            tension: 0.3,
+            fill: true
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Effect of Number of Candles on Carousel Rotation Speed',
+                font: {
+                    size: 18,
+                    weight: 'bold'
+                },
+                padding: 20
+            },
+            legend: {
+                display: true,
+                position: 'top',
+                labels: {
+                    font: {
+                        size: 14
+                    },
+                    padding: 15
+                }
+            },
+            tooltip: {
+                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                padding: 12,
+                titleFont: {
+                    size: 14
+                },
+                bodyFont: {
+                    size: 13
+                },
+                callbacks: {
+                    label: function(context) {
+                        return 'Average RPM: ' + context.parsed.y.toFixed(1);
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Number of Candles',
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    padding: 10
+                },
+                ticks: {
+                    font: {
+                        size: 12
+                    }
+                },
+                grid: {
+                    color: 'rgba(0, 0, 0, 0.05)'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Average Rotations per Minute (RPM)',
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    padding: 10
+                },
+                beginAtZero: true,
+                ticks: {
+                    font: {
+                        size: 12
+                    },
+                    stepSize: 5
+                },
+                grid: {
+                    color: 'rgba(0, 0, 0, 0.05)'
+                }
+            }
+        }
+    }
+});
+</script>
 
 <?php include 'includes/footer.php'; ?>
 

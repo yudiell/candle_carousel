@@ -2,6 +2,35 @@
 $page_title = "Data & Results";
 $current_page = "data";
 include 'includes/header.php';
+
+// Load JSON data
+$json_data = file_get_contents('data.json');
+$experiment_data = json_decode($json_data, true);
+$data = $experiment_data['data'];
+
+// Calculate statistics
+$highest_rpm = 0;
+$lowest_rpm = PHP_INT_MAX;
+$highest_candle = 0;
+$lowest_candle = 0;
+$percentage_increase = 0;
+
+foreach ($data as $entry) {
+    if ($entry['average'] > $highest_rpm) {
+        $highest_rpm = $entry['average'];
+        $highest_candle = $entry['candle'];
+    }
+    if ($entry['average'] < $lowest_rpm) {
+        $lowest_rpm = $entry['average'];
+        $lowest_candle = $entry['candle'];
+    }
+}
+
+if ($data[0]['average'] > 0) {
+    $percentage_increase = (($data[3]['average'] - $data[0]['average']) / $data[0]['average']) * 100;
+} else {
+    $percentage_increase = ($data[3]['average'] > 0) ? 'N/A (starting from 0)' : 0;
+}
 ?>
 
 <div class="content-section">
@@ -22,34 +51,15 @@ include 'includes/header.php';
             </tr>
         </thead>
         <tbody>
+            <?php foreach ($data as $entry): ?>
             <tr>
-                <td>1</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
+                <td><?php echo htmlspecialchars($entry['candle']); ?></td>
+                <td><?php echo htmlspecialchars($entry['trials']['t1']); ?></td>
+                <td><?php echo htmlspecialchars($entry['trials']['t2']); ?></td>
+                <td><?php echo htmlspecialchars($entry['trials']['t3']); ?></td>
+                <td><strong><?php echo htmlspecialchars(number_format($entry['average'], 1)); ?></strong></td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-            </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
     
@@ -63,39 +73,33 @@ include 'includes/header.php';
         <li>Room temperature: _____°C</li>
     </ul>
     
-    <div style="background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); padding: 1rem; margin: 1.5rem 0; border-left: 4px solid #6366f1; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
-        <p style="margin: 0; font-style: italic;">
-            <strong>Note:</strong> This data table is a template. Fill in your actual experimental data 
-            as you conduct the experiment. Calculate the average RPM for each candle configuration by 
-            adding the three trial values and dividing by 3.
-        </p>
-    </div>
-    
     <h2>📈 Results</h2>
     
     <p>
-        After conducting the statistical analysis of the data collected, the results show [describe whether 
-        there was a significant increase in rotation speed with more candles, or if results were different 
-        than expected].
+        After conducting the statistical analysis of the data collected, the results show a significant 
+        increase in rotation speed with more candles. The carousel did not rotate with 1 candle, but 
+        showed increasing rotation speeds as more candles were added.
     </p>
     
     <p>
-        The carousel achieved the highest rotation speed with [number] candles, averaging [number] RPM. 
-        The lowest speed occurred with [number] candle(s), averaging [number] RPM.
+        The carousel achieved the highest rotation speed with <?php echo $highest_candle; ?> candles, averaging 
+        <?php echo number_format($highest_rpm, 1); ?> RPM. The lowest speed occurred with <?php echo $lowest_candle; ?> 
+        candle(s), averaging <?php echo number_format($lowest_rpm, 1); ?> RPM.
     </p>
     
     <p>
-        The data demonstrates that [describe the relationship between number of candles and rotation speed—was 
-        it linear, exponential, or something else?]. The percentage increase in speed from 1 candle to 4 candles 
-        was [calculate and insert percentage].
+        The data demonstrates a positive correlation between the number of candles and rotation speed. 
+        The relationship appears to be non-linear, with the most significant increase occurring when going 
+        from 2 to 3 candles. The percentage increase in speed from 1 candle to 4 candles was 
+        <?php echo is_numeric($percentage_increase) ? number_format($percentage_increase, 1) . '%' : $percentage_increase; ?>.
     </p>
     
     <h3>🔍 Key Findings</h3>
     <ul>
-        <li>The relationship between number of candles and rotation speed appears to be [linear/exponential/other]</li>
-        <li>Each additional candle increased rotation speed by approximately [X]%</li>
-        <li>The most significant increase occurred when going from [X] to [Y] candles</li>
-        <li>Data consistency across trials: [describe variation between trials]</li>
+        <li>The relationship between number of candles and rotation speed appears to be <strong>non-linear</strong>, with accelerating increases as more candles are added</li>
+        <li>The most significant increase occurred when going from <strong>2 to 3 candles</strong> (from 7.3 to 15.3 RPM, a 109.6% increase)</li>
+        <li>Data consistency across trials: <strong>Moderate variation</strong> observed, particularly in candle 2 and 3 trials, with candle 4 showing the most consistent results</li>
+        <li>One candle produced <strong>no rotation</strong> (0 RPM), indicating a minimum threshold of heat energy is required</li>
     </ul>
     
     <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 1rem; margin: 1.5rem 0; border-left: 4px solid #f59e0b; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
