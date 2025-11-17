@@ -11,6 +11,7 @@ include 'includes/header.php';
         <p style="font-size: 1.2rem; color: #64748b; font-style: italic;">
             A Science Fair Project Demonstrating Thermal Energy Conversion Through Convection
         </p>
+        <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/201801/MIT-dirac-heat_0.jpg?itok=SoFm6_6B" alt="Heat energy and thermal energy conversion" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin: 2rem 0;">
     </div>
     
     <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 2rem; border-radius: 16px; margin: 2rem 0; border-left: 4px solid #f59e0b; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">

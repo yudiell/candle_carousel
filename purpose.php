@@ -23,6 +23,17 @@ include 'includes/header.php';
         principle has numerous real-world applications:
     </p>
     
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+        <div>
+            <img src="https://caltechsites-prod-assets.s3.amazonaws.com/scienceexchange/images/wind-turbine-future-energy.width-600.jpg" alt="Wind turbines converting air movement into electricity" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <p style="text-align: center; margin-top: 0.5rem; font-size: 0.9rem;"><strong>🌬️ Wind Turbines:</strong> Convert air movement into rotational motion</p>
+        </div>
+        <div>
+            <img src="https://npr.brightspotcdn.com/e5/39/442b85cd4852bd522e7be932fd72/unm-hot-air-balloon.jpg" alt="Hot air balloon using rising hot air for lift" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <p style="text-align: center; margin-top: 0.5rem; font-size: 0.9rem;"><strong>🎈 Hot Air Balloons:</strong> Use rising hot air to provide lift</p>
+        </div>
+    </div>
+    
     <ul>
         <li><strong>🌬️ Wind Turbines:</strong> Convert air movement into rotational motion to generate electricity</li>
         <li><strong>🎈 Hot Air Balloons:</strong> Use rising hot air to provide lift</li>

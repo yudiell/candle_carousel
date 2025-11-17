@@ -9,6 +9,10 @@ include 'includes/header.php';
     
     <h2>📜 Historical Context</h2>
     
+    <div style="text-align: center; margin: 2rem 0;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/AWeihnachtspyramide02.JPG" alt="German Christmas pyramid or Weihnachtspyramide" style="max-width: 25%; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    </div>
+    
     <p>
         Candle carousels, also known as Christmas pyramids or candle pyramids, originated in the Erzgebirge 
         (Ore Mountains) region of Germany during the 18th century. Miners in this region created simple versions 
@@ -49,6 +53,10 @@ include 'includes/header.php';
     </p>
     
     <h3>How Convection Works</h3>
+    
+    <div style="text-align: center; margin: 2rem 0;">
+        <img src="https://o.quizlet.com/kJVaKQzoPQRuMe5c5.2TUQ_b.jpg" alt="Convection current diagram showing hot air rising" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    </div>
     
     <p>When air is heated:</p>
     <ol>

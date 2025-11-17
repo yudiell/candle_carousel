@@ -44,6 +44,10 @@ include 'includes/header.php';
     
     <p>The following materials are needed to conduct this experiment:</p>
     
+    <div style="text-align: center; margin: 2rem 0;">
+        <img src="images/carrousel.jpg" alt="Tea light candles and materials for candle carousel experiment" style="max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    </div>
+    
     <h3>🕯️ Candles and Fuel</h3>
     <ul>
         <li>4 tea light candles</li>
